@@ -78,10 +78,43 @@
           </article>
         </div>
       </section>
+      <section class="pokemon-section">
+        <div class="container">
+          <article class="pokemon-card">
+            <header class="pokemon-header">
+              <h2>Pokédex</h2>
+              <p>Pesquise qualquer Pokémon</p>
+            </header>
+
+            <form id="pokemon-form" class="pokemon-form">
+              <label for="pokemon-input" class="sr-only">
+                Digite o nome do pokémon
+              </label>
+
+              <input
+                type="text"
+                id="pokemon-input"
+                placeholder="Ex: Pikachu"
+                autocomplete="off"
+              />
+
+              <button type="submit">Buscar Pokémon</button>
+            </form>
+            <section class="pokemon-resultado" id="pokemon-resultado">
+              <img src="" alt="" />
+              <h3 id="pokemon-nome">Nome do pokémon</h3>
+              <p id="pokemon-altura">Altura do pokémon</p>
+              <p id="pokemon-peso">Peso do pokémon</p>
+              <ul id="pokemon-tipos"></ul>
+            </section>
+          </article>
+        </div>
+      </section>
     </main>
 
     <script src="./js/menu-hamburguer.js"></script>
     <script src="./js/fundo-aleatorio.js"></script>
     <script src="./js/todo-list.js"></script>
+    <script src="./js/pokemon-api.js"></script>
   </body>
 </html>
