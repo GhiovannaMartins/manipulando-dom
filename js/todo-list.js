@@ -84,6 +84,8 @@ function adicionarTarefa(event) {
   btnConcluir.addEventListener("click", () => {
     texto.classList.toggle("tarefa-concluida");
 
+    const tarefaConcluida = texto.classList.contains("tarefa-concluida");
+
     // se na lista de classes do elemento texto contém a classe.tarefa-concluida
     // então, ele executará o bloco de código, caso contrário, não.
     if (texto.classList.contains("tarefa-concluida")) {
@@ -91,11 +93,16 @@ function adicionarTarefa(event) {
       iconConcluir.classList.add("bi-arrow-clockwise");
 
       btnConcluir.setAttribute("aria-label", "Desmarcar tarefa");
+      //move o item da lista para o final da lista
+      itemLista.append(itemLista);
     } else {
       iconConcluir.classList.remove("bi-arrow-clockwise");
       iconConcluir.classList.add("bi-check-lg");
 
       btnConcluir.setAttribute("aria-label", "Concluir tarefa");
+
+      //move a tarefa para o inicio da lista
+      lista.prepend(itemLista);
     }
   });
 }
